@@ -1,0 +1,172 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "API",
+    "description": "",
+    "contact": {}
+  },
+  "host": "127.0.0.1:8080",
+  "basePath": "/api/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/broadcast": {
+      "get": {
+        "description": "",
+        "summary": "fetch",
+        "operationId": "fetch",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/gui": {
+      "post": {
+        "description": "",
+        "summary": "send",
+        "operationId": "send",
+        "deprecated": false,
+        "produces": [
+          "*/*"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "processId",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "amount",
+            "in": "formData",
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "summary": "apply3",
+        "operationId": "apply3",
+        "deprecated": false,
+        "produces": [
+          "application/vnd.sun.wadl+xml"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "xml": {
+                "name": "response",
+                "attribute": false,
+                "wrapped": false
+              },
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/application.wadl": {
+      "get": {
+        "description": "",
+        "summary": "getWadl",
+        "operationId": "getWadl",
+        "deprecated": false,
+        "produces": [
+          "application/vnd.sun.wadl+xml"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "xml": {
+                "name": "response",
+                "attribute": false,
+                "wrapped": false
+              },
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/application.wadl/{path}": {
+      "get": {
+        "description": "",
+        "summary": "getExternalGrammar",
+        "operationId": "getExternalGrammar",
+        "deprecated": false,
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "xml": {
+                "name": "response",
+                "attribute": false,
+                "wrapped": false
+              },
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
