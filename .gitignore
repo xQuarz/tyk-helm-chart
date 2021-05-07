@@ -6,3 +6,4 @@ tyk-pro/old_tpl
 values_real.yaml
 tyk-k8s/templates/secrets.yaml
 tyk-pro/scripts/secrets.yaml
+config/Licence.txt
